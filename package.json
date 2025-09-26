@@ -3,8 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "predev": "node scripts/generate-gallery-manifest.mjs",
     "dev": "next dev --turbopack",
     "dev:watch": "nodemon --exec \"next dev --turbopack\"",
+    "prebuild": "node scripts/generate-gallery-manifest.mjs",
     "build": "next build --turbopack",
     "start": "next start",
     "lint": "eslint"

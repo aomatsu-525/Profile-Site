@@ -1,6 +1,7 @@
 import type { NextConfig } from "next";
 
 const repoName = "Profile-Site";
+const isGh = !!process.env.GITHUB_ACTIONS;
 
 const nextConfig: NextConfig = {
   output: 'export',
@@ -8,10 +9,13 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
-  // GitHub Pagesでの公開時のみbasePathを使用
-  // ローカル確認時は相対パスを使用
-  basePath: process.env.GITHUB_ACTIONS ? `/${repoName}` : "",
-  assetPrefix: process.env.GITHUB_ACTIONS ? `/${repoName}/` : "./",
+  // GitHub Pages での公開時のみ basePath/assetPrefix を設定
+  ...(isGh
+    ? {
+      basePath: `/${repoName}`,
+      assetPrefix: `/${repoName}/`,
+    }
+    : {}),
 };
 
 export default nextConfig;
