@@ -1,6 +1,5 @@
 import type { NextConfig } from "next";
 
-const isProd = process.env.NODE_ENV === "production";
 const repoName = "Profile-Site";
 
 const nextConfig: NextConfig = {
@@ -9,8 +8,10 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
-  basePath: isProd ? `/${repoName}` : "./",
-  assetPrefix: isProd ? `/${repoName}` : "./",
+  // GitHub Pagesでの公開時のみbasePathを使用
+  // ローカル確認時は相対パスを使用
+  basePath: process.env.GITHUB_ACTIONS ? `/${repoName}` : "",
+  assetPrefix: process.env.GITHUB_ACTIONS ? `/${repoName}/` : "./",
 };
 
 export default nextConfig;
