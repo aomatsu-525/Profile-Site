@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+:root {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-zen-maru-gothic: var(--font-zen-maru-gothic);
+  --font-hachi-maru-pop: var(--font-hachi-maru-pop);
+
+  --background: #fac0fa;
+  --foreground: #1f0e1d;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-zen-maru-gothic), "Zen Maru Gothic", sans-serif;
+}
+
+/* すべての要素にZen Maru Gothicを適用 */
+h1, h2, h3, h4, h5, h6, p, li, span, a, button {
+  font-family: var(--font-zen-maru-gothic), "Zen Maru Gothic", sans-serif;
+}
+
+[id] {
+  scroll-margin-top: 80px; /* ヘッダー高さ分の余白 */
+}
