@@ -13,7 +13,7 @@ export default function ProfileSection() {
       <div className="flex flex-col md:flex-row mb-16">
         <div className="w-full md:w-1/2 flex justify-center items-center p-4">
           <Image
-            src="../../../public/image/icon.PNG"
+            src="/Profile/image/icon.PNG"
             alt="プロフィール画像"
             width={360}
             height={360}
