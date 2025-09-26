@@ -22,7 +22,7 @@ export default function ProfileSection() {
           />
         </div>
 
-        <div className="w-full md:w-1/2 flex flex-col py-4 px-4 lg:py-16 lg:px-16 md:text-left">
+        <div className="w-full md:w-1/2 flex flex-col justify-center py-4 px-4 lg:py-16 lg:px-16 text-center md:text-left">
           <p className="text-base sm:text-lg md:text-xl text-gray-600 mb-2 lg:mb-4">
             うさぎが好きなおしゃべり系配信者
           </p>
