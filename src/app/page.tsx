@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import ProfileSection from "@/components/sections/ProfileSection";
 import LinksSection from "@/components/sections/LinksSection";
 import Gallery from "@/components/sections/Gallery";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   const [activeSection, setActiveSection] = useState<
@@ -23,6 +24,8 @@ export default function Home() {
         {activeSection === "links" && <LinksSection />}
         {activeSection === "gallery" && <Gallery />}
       </main>
+
+      <Footer />
     </div>
   );
 }

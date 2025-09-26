@@ -31,10 +31,20 @@ export default function ProfileSection() {
           </h1>
           <p className="text-2xl text-pink-400">Momiji Towa</p>
 
-          <div className="mt-4">
+          <div className="mt-8">
+            <div className="mb-2">
+              <p className="text-xl text-pink-500">誕生日</p>
+              <p className="text-base">５月２５日</p>
+            </div>
+
             <div className="mb-2">
               <p className="text-xl text-pink-500">年齢</p>
               <p className="text-base">24歳</p>
+            </div>
+
+            <div className="mb-2">
+              <p className="text-xl text-pink-500">身長</p>
+              <p className="text-base">153cm</p>
             </div>
 
             <div className="mb-2">
@@ -46,25 +56,15 @@ export default function ProfileSection() {
             </div>
 
             <div className="mb-2">
-              <p className="text-xl text-pink-500">誕生日</p>
-              <p className="text-base">５月２５日</p>
+              <p className="text-xl text-pink-500">好きなこと</p>
+              <p className="text-base">うさぎと遊ぶこと</p>
+              <p className="text-base">たくさん寝ること</p>
+              <p className="text-base">音楽を聴くこと</p>
             </div>
 
             <div className="mb-2">
               <p className="text-xl text-pink-500">初配信日</p>
               <p className="text-base">７月１１日</p>
-            </div>
-
-            <div className="mb-2">
-              <p className="text-xl text-pink-500">好きなこと</p>
-              <p className="text-base">
-                うさぎと遊ぶこと・たくさん寝ること・音楽を聴くこと
-              </p>
-            </div>
-
-            <div className="mb-2">
-              <p className="text-xl text-pink-500">身長</p>
-              <p className="text-base">153cm</p>
             </div>
           </div>
         </div>
