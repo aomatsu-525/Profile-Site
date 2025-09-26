@@ -51,7 +51,7 @@ export default function Gallery() {
             )}
 
             {!isLoading && !error && images.length > 0 && (
-                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 mb-32">
                     {images.map((src, idx) => (
                         <div
                             key={src + idx}

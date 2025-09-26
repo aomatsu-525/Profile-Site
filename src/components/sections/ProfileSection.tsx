@@ -10,7 +10,7 @@ export default function ProfileSection() {
         Profile
       </p>
 
-      <div className="flex flex-col md:flex-row mb-16">
+      <div className="flex flex-col md:flex-row mb-32">
         <div className="w-full md:w-1/2 flex justify-center items-center p-4">
           <Image
             src="./image/icon.PNG"

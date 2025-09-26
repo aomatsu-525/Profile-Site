@@ -30,7 +30,7 @@ export default function LinksSection() {
         Links
       </p>
 
-      <div className="flex flex-col items-center">
+      <div className="flex flex-col items-center mb-32">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-4xl">
           {links.map((link, index) => (
             <a
