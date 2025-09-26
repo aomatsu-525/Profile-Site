@@ -16,10 +16,19 @@ export default function Header({
   const handleSectionChange = (section: "profile" | "links" | "gallery") => {
     onSectionChange(section);
     setIsMenuOpen(false); // メニューを閉じる
+    // セクション先頭にスムーズスクロール
+    const targetId = section === "profile" ? "profile" : section;
+    const el = document.getElementById(targetId);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
+    } else {
+      // フォールバック
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
   };
 
   return (
-    <header className="bg-white shadow-md sticky top-0 z-50">
+    <header className="bg-white shadow-md sticky top-0 z-100">
       <div className="max-w-4xl mx-auto px-4 py-3">
         <nav className="flex justify-between items-center">
           {/* ロゴ部分 */}
@@ -30,11 +39,10 @@ export default function Header({
             <li>
               <button
                 onClick={() => onSectionChange("profile")}
-                className={`transition-colors ${
-                  activeSection === "profile"
-                    ? "text-pink-600 font-semibold"
-                    : "text-gray-700 hover:text-pink-600"
-                }`}
+                className={`transition-colors ${activeSection === "profile"
+                  ? "text-pink-600 font-semibold"
+                  : "text-gray-700 hover:text-pink-600"
+                  }`}
               >
                 プロフィール
               </button>
@@ -42,11 +50,10 @@ export default function Header({
             <li>
               <button
                 onClick={() => onSectionChange("gallery")}
-                className={`transition-colors ${
-                  activeSection === "gallery"
-                    ? "text-pink-600 font-semibold"
-                    : "text-gray-700 hover:text-pink-600"
-                }`}
+                className={`transition-colors ${activeSection === "gallery"
+                  ? "text-pink-600 font-semibold"
+                  : "text-gray-700 hover:text-pink-600"
+                  }`}
               >
                 Gallery
               </button>
@@ -54,11 +61,10 @@ export default function Header({
             <li>
               <button
                 onClick={() => onSectionChange("links")}
-                className={`transition-colors ${
-                  activeSection === "links"
-                    ? "text-pink-600 font-semibold"
-                    : "text-gray-700 hover:text-pink-600"
-                }`}
+                className={`transition-colors ${activeSection === "links"
+                  ? "text-pink-600 font-semibold"
+                  : "text-gray-700 hover:text-pink-600"
+                  }`}
               >
                 リンク
               </button>
@@ -91,11 +97,10 @@ export default function Header({
             <li>
               <button
                 onClick={() => handleSectionChange("profile")}
-                className={`block w-full text-left px-4 py-2 transition-colors ${
-                  activeSection === "profile"
-                    ? "text-pink-600 font-semibold bg-pink-50"
-                    : "text-gray-700 hover:text-pink-600 hover:bg-gray-50"
-                }`}
+                className={`block w-full text-left px-4 py-2 transition-colors ${activeSection === "profile"
+                  ? "text-pink-600 font-semibold bg-pink-50"
+                  : "text-gray-700 hover:text-pink-600 hover:bg-gray-50"
+                  }`}
               >
                 プロフィール
               </button>
@@ -103,11 +108,10 @@ export default function Header({
             <li>
               <button
                 onClick={() => handleSectionChange("gallery")}
-                className={`block w-full text-left px-4 py-2 transition-colors ${
-                  activeSection === "gallery"
-                    ? "text-pink-600 font-semibold bg-pink-50"
-                    : "text-gray-700 hover:text-pink-600 hover:bg-gray-50"
-                }`}
+                className={`block w-full text-left px-4 py-2 transition-colors ${activeSection === "gallery"
+                  ? "text-pink-600 font-semibold bg-pink-50"
+                  : "text-gray-700 hover:text-pink-600 hover:bg-gray-50"
+                  }`}
               >
                 Gallery
               </button>
@@ -115,11 +119,10 @@ export default function Header({
             <li>
               <button
                 onClick={() => handleSectionChange("links")}
-                className={`block w-full text-left px-4 py-2 transition-colors ${
-                  activeSection === "links"
-                    ? "text-pink-600 font-semibold bg-pink-50"
-                    : "text-gray-700 hover:text-pink-600 hover:bg-gray-50"
-                }`}
+                className={`block w-full text-left px-4 py-2 transition-colors ${activeSection === "links"
+                  ? "text-pink-600 font-semibold bg-pink-50"
+                  : "text-gray-700 hover:text-pink-600 hover:bg-gray-50"
+                  }`}
               >
                 リンク
               </button>
